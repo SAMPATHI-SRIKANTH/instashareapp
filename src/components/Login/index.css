@@ -1,0 +1,119 @@
+.login-container {
+  display: flex;
+  flex-direction: row;
+  min-width: 768px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.login-landing-image-container {
+  height: 372.99993896484375px;
+  width: 582px;
+  border-radius: 0px;
+}
+.login-landing-image {
+  content: 'hello';
+  height: 372px;
+  width: 582px;
+}
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 458px;
+  width: 456px;
+  background: #fefeff;
+  box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+  border-radius: 8px;
+}
+.login-app-logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login-app-logo {
+  width: 78px;
+  height: 40px;
+  flex-shrink: 0;
+}
+.website-logo-heading {
+  color: #262626;
+  text-align: center;
+  font-size: 24px;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 32px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 360px;
+}
+.login-input-label {
+  color: #262626;
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+}
+.login-input-element {
+  height: 40px;
+  width: 360px;
+  background: #eeeeee;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #262626;
+  padding-left: 5px;
+  margin-top: 5px;
+}
+.login-button {
+  height: 40px;
+  width: 360px;
+  background: #4094ef;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-error-msg {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #ef4444;
+}
+@media screen and (max-width: 768px) {
+  .login-landing-image-container {
+    display: none;
+  }
+  .login-container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  .login-form-container {
+    width: 70%;
+    margin: auto;
+  }
+}
