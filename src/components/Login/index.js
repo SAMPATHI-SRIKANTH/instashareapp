@@ -20,7 +20,6 @@ class Login extends Component {
 
   onSubmitFailure = msg => {
     this.setState({showErrorMsg: true, errorMsg: msg})
-    console.log(msg)
   }
 
   onSubmitLogin = async event => {
@@ -56,20 +55,19 @@ class Login extends Component {
 
   render() {
     const jwtToken = Cookies.get('jwt_token')
-    console.log(jwtToken)
+
     if (jwtToken !== undefined) {
       return <Redirect to="/" />
     }
     const {username, password, showErrorMsg, errorMsg} = this.state
     return (
       <div className="login-container">
-        <div className="login-landing-image-container">
-          <img
-            src="https://res.cloudinary.com/ssrikanth/image/upload/v1686326572/InstaShare/Layer_2_cg43ns.png"
-            alt="website login"
-            className="login-landing-image"
-          />
-        </div>
+        <img
+          src="https://res.cloudinary.com/ssrikanth/image/upload/v1686326572/InstaShare/Layer_2_cg43ns.png"
+          alt="website login"
+          className="login-landing-image"
+        />
+
         <form className="login-form-container" onSubmit={this.onSubmitLogin}>
           <div className="login-app-logo-container">
             <img
@@ -106,11 +104,10 @@ class Login extends Component {
             />
           </div>
           {showErrorMsg && <p className="login-error-msg">{errorMsg}</p>}
-          <div>
-            <button type="submit" className="login-button">
-              Login
-            </button>
-          </div>
+
+          <button type="submit" className="login-button">
+            Login
+          </button>
         </form>
       </div>
     )

@@ -113,9 +113,9 @@ class UserProfile extends Component {
     const {profileData} = this.state
     console.log(profileData)
     return (
-      <div>
+      <>
         <ProfileCard data={profileData} person="user" />
-      </div>
+      </>
     )
   }
 

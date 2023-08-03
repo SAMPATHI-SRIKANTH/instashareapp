@@ -2,8 +2,6 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 
-import SearchContext from '../../Context/SearchContext'
-
 import PostItem from '../PostItem'
 
 import './index.css'
@@ -180,12 +178,7 @@ class SearchResults extends Component {
     const {searchPostsList} = this.state
 
     return (
-      <SearchContext.Provider
-        value={{
-          onClickLikeIcon: this.onClickLikeIcon,
-          onClickUnLikeIcon: this.onClickUnLikeIcon,
-        }}
-      >
+      <>
         <h1 className="search-head">Search Results</h1>
         <ul className="list-of-posts">
           {searchPostsList.map(eachPost => (
@@ -197,7 +190,7 @@ class SearchResults extends Component {
             />
           ))}
         </ul>
-      </SearchContext.Provider>
+      </>
     )
   }
 

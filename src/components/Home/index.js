@@ -10,7 +10,6 @@ const Home = () => (
   <SearchContext.Consumer>
     {value => {
       const {searchValue, showSearchResults} = value
-
       return (
         <>
           <Header />

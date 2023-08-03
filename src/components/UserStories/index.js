@@ -65,7 +65,7 @@ class UserStories extends Component {
     return (
       <div className="failure-view">
         <img
-          src="https://res.cloudinary.com/ssrikanth/image/upload/v1686326749/InstaShare/Group_7522_fxycfq.png"
+          src="https://res.cloudinary.com/ssrikanth/image/upload/v1686326760/InstaShare/alert-triangle_p7nd3h.png"
           alt="failure view"
           className="failure-img"
         />

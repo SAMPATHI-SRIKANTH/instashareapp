@@ -97,6 +97,9 @@
 .nav-mobile {
   display: none;
 }
+.active {
+  color: #4094ef;
+}
 @media screen and (max-width: 768px) {
   .nav-container {
     width: 90%;
@@ -136,7 +139,7 @@
     margin: auto;
   }
   .mobile-nav-search-btn {
-    color: #4094ef;
+    color: #262626;
     font-size: 14px;
     font-family: Roboto;
     font-weight: 500;

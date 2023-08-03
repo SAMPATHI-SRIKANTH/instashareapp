@@ -38,7 +38,7 @@ class MyProfile extends Component {
     const response = await fetch(apiUrl, options)
     if (response.ok) {
       const data = await response.json()
-      console.log(data)
+
       const updatedData = {
         profile: {
           id: data.profile.id,
@@ -82,28 +82,23 @@ class MyProfile extends Component {
     )
   }
 
-  renderFailureView = () => {
-    console.log('failure', this.state)
-    return (
-      <div className="failure-view">
-        <img
-          src="https://res.cloudinary.com/ssrikanth/image/upload/v1686326749/InstaShare/Group_7522_fxycfq.png"
-          alt="failure view"
-          className="failure-img"
-        />
-        <p className="failure-heading">
-          Something went wrong. Please try again
-        </p>
-        <button
-          type="button"
-          className="failure-button"
-          onClick={this.onClickRetry}
-        >
-          Try again
-        </button>
-      </div>
-    )
-  }
+  renderFailureView = () => (
+    <div className="failure-view">
+      <img
+        src="https://res.cloudinary.com/ssrikanth/image/upload/v1686326749/InstaShare/Group_7522_fxycfq.png"
+        alt="failure view"
+        className="failure-img"
+      />
+      <p className="failure-heading">Something went wrong. Please try again</p>
+      <button
+        type="button"
+        className="failure-button"
+        onClick={this.onClickRetry}
+      >
+        Try again
+      </button>
+    </div>
+  )
 
   renderSuccessView = () => {
     const {profileData} = this.state

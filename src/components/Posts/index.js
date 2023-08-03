@@ -2,7 +2,6 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 
-import SearchContext from '../../Context/SearchContext'
 import PostItem from '../PostItem'
 
 import './index.css'
@@ -147,7 +146,7 @@ class Posts extends Component {
     return (
       <div className="failure-view">
         <img
-          src="https://res.cloudinary.com/ssrikanth/image/upload/v1686326749/InstaShare/Group_7522_fxycfq.png"
+          src="https://res.cloudinary.com/ssrikanth/image/upload/v1686326760/InstaShare/alert-triangle_p7nd3h.png"
           alt="failure view"
           className="failure-img"
         />
@@ -169,18 +168,18 @@ class Posts extends Component {
     const {postsList} = this.state
 
     return (
-      <SearchContext.Provider
-        value={{
-          onClickLikeIcon: this.onClickLikeIcon,
-          onClickUnLikeIcon: this.onClickUnLikeIcon,
-        }}
-      >
+      <>
         <ul className="list-of-posts">
           {postsList.map(eachPost => (
-            <PostItem item={eachPost} key={eachPost.postId} />
+            <PostItem
+              item={eachPost}
+              key={eachPost.postId}
+              onClickLikeIcon={this.onClickLikeIcon}
+              onClickUnLikeIcon={this.onClickUnLikeIcon}
+            />
           ))}
         </ul>
-      </SearchContext.Provider>
+      </>
     )
   }
 

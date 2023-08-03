@@ -10,8 +10,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.app {
+  margin: 0 auto;
+}
 ul {
   padding-left: 0px;
   list-style-type: none;
+}
+a {
+  text-decoration: none;
 }

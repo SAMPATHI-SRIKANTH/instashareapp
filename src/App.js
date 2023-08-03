@@ -21,7 +21,6 @@ class App extends Component {
 
   onClickShowSearch = () => {
     this.setState(prevState => ({
-      menuClick: !prevState.menuClick,
       searchBox: !prevState.searchBox,
     }))
   }
@@ -43,7 +42,7 @@ class App extends Component {
 
   render() {
     const {showSearchResults, menuClick, searchBox, searchValue} = this.state
-    console.log(this.state)
+
     return (
       <SearchContext.Provider
         value={{

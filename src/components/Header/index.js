@@ -42,24 +42,36 @@ const Header = props => (
         history.replace('/login')
       }
 
+      const isActiveRoute = p => {
+        const {match} = props
+        const {path} = match
+        if (path === p) {
+          return 'active'
+        }
+        return ''
+      }
+
       const renderMenuOptions = () => (
         <ul className="mobile-nav-links">
           <li>
-            <Link to="/" className="nav-link">
+            <Link to="/" className={`nav-link ${isActiveRoute('/')}`}>
               Home
             </Link>
           </li>
           <li>
             <button
               type="button"
-              className="mobile-nav-search-btn"
+              className={`mobile-nav-search-btn ${searchBox && 'active'}`}
               onClick={clickShowSearch}
             >
               Search
             </button>
           </li>
           <li>
-            <Link to="/my-profile" className="nav-link">
+            <Link
+              to="/my-profile"
+              className={`nav-link ${isActiveRoute('/my-profile')}`}
+            >
               Profile
             </Link>
           </li>
@@ -130,12 +142,15 @@ const Header = props => (
               </div>
               <ul className="list-of-links">
                 <li>
-                  <Link to="/" className="nav-link">
+                  <Link to="/" className={`nav-link ${isActiveRoute('/')}`}>
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link to="/my-profile" className="nav-link">
+                  <Link
+                    to="/my-profile"
+                    className={`nav-link ${isActiveRoute('/my-profile')}`}
+                  >
                     Profile
                   </Link>
                 </li>

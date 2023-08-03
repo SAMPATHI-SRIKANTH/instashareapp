@@ -57,8 +57,9 @@
 }
 .likes-count {
   color: #262626;
-  font-size: 14px;
   font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
   font-weight: 500;
   line-height: 18px;
 }
@@ -66,6 +67,7 @@
   color: #262626;
   font-size: 14px;
   font-family: Roboto;
+  font-weight: 400;
   line-height: 18px;
 }
 .comments-container {
@@ -76,20 +78,23 @@
   color: #262626;
   font-size: 14px;
   font-family: Roboto;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 18px;
 }
 .commented-user-name {
-  font-weight: bold;
+  font-weight: 500;
 }
 .created-at {
   color: #989898;
-  font-size: 14px;
   font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 18px;
 }
 @media screen and (max-width: 768px) {
   .post-item {
+    width: 100%;
     min-width: 300px;
     margin-top: 10px;
     margin-bottom: 10px;
