@@ -36,8 +36,8 @@ class App extends Component {
     this.setState({searchValue: event.target.value})
   }
 
-  onClickSearchButton = () => {
-    this.setState({showSearchResults: true})
+  onClickSearchButton = val => {
+    this.setState({showSearchResults: val, searchValue: ''})
   }
 
   render() {

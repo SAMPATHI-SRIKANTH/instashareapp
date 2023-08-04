@@ -1,5 +1,5 @@
 .search-results-container {
-  width: 90%;
+  width: 100%;
 }
 
 .search-head {
@@ -37,6 +37,15 @@
   text-align: center;
   color: #989898;
 }
+.list-of-posts {
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .not-found-p {
     font-size: 16px;

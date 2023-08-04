@@ -104,10 +104,9 @@ class MyProfile extends Component {
     const {profileData} = this.state
     console.log(profileData)
     return (
-      <div className="my-profile-container">
-        <Header />
+      <>
         <ProfileCard data={profileData} person="my" />
-      </div>
+      </>
     )
   }
 
@@ -126,7 +125,12 @@ class MyProfile extends Component {
   }
 
   render() {
-    return <div>{this.renderMyProfile()}</div>
+    return (
+      <>
+        <Header />
+        {this.renderMyProfile()}
+      </>
+    )
   }
 }
 export default MyProfile

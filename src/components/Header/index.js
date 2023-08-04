@@ -29,7 +29,7 @@ const Header = props => (
       }
 
       const clickSearchButton = () => {
-        onClickSearchButton()
+        onClickSearchButton(true)
       }
 
       const clickMenu = () => {
@@ -51,9 +51,12 @@ const Header = props => (
         return ''
       }
 
+      const onClickHome = () => {
+        onClickSearchButton(false)
+      }
       const renderMenuOptions = () => (
         <ul className="mobile-nav-links">
-          <li>
+          <li onClick={onClickHome}>
             <Link to="/" className={`nav-link ${isActiveRoute('/')}`}>
               Home
             </Link>
@@ -61,7 +64,9 @@ const Header = props => (
           <li>
             <button
               type="button"
-              className={`mobile-nav-search-btn ${searchBox && 'active'}`}
+              className={`mobile-nav-search-btn ${
+                searchBox ? 'search-active' : ''
+              }`}
               onClick={clickShowSearch}
             >
               Search

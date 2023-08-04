@@ -138,6 +138,9 @@
   .mobile-search {
     margin: auto;
   }
+  .search-active {
+    color: #4094ef;
+  }
   .mobile-nav-search-btn {
     color: #262626;
     font-size: 14px;

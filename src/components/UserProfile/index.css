@@ -1,9 +1,0 @@
-.user-profile-container {
-  width: 100%;
-  background-color: #ffffff;
-}
-@media screen and (max-width: 768px) {
-  .user-profile-container {
-    background-color: #ffffff;
-  }
-}

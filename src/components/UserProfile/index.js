@@ -111,7 +111,7 @@ class UserProfile extends Component {
 
   renderUserProfileSuccessView = () => {
     const {profileData} = this.state
-    console.log(profileData)
+
     return (
       <>
         <ProfileCard data={profileData} person="user" />
@@ -121,13 +121,14 @@ class UserProfile extends Component {
 
   renderUserProfile = () => {
     const {apiStatusUserProfile} = this.state
+
     switch (apiStatusUserProfile) {
+      case apiUserProfileStatus.success:
+        return this.renderUserProfileSuccessView()
       case apiUserProfileStatus.inProgress:
         return this.renderLoadingView()
       case apiUserProfileStatus.failure:
         return this.renderFailureView()
-      case apiUserProfileStatus.success:
-        return this.renderUserProfileSuccessView()
       default:
         return null
     }

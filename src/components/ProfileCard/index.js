@@ -3,7 +3,6 @@ import {BiCamera} from 'react-icons/bi'
 import './index.css'
 
 const ProfileCard = props => {
-  console.log(props)
   const {data, person} = props
   const {profile} = data
   const {
@@ -19,8 +18,8 @@ const ProfileCard = props => {
   } = profile
 
   return (
-    <div className="container">
-      <div className="profile-container">
+    <>
+      <div className="container">
         <div className="profile">
           <h1 className="profile-user-name-mobile">{userName}</h1>
           <div className="profile-i-container">
@@ -29,7 +28,6 @@ const ProfileCard = props => {
               alt={`${person} profile`}
               className="profile-img"
             />
-
             <div className="profile-right-container">
               <h1 className="profile-user-name-des">{userName}</h1>
               <div className="follows-details-container">
@@ -91,7 +89,7 @@ const ProfileCard = props => {
           )}
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

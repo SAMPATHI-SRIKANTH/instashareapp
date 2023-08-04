@@ -119,11 +119,16 @@
     align-items: center;
   }
   .login-form-container {
-    width: 90%;
+    width: 100%;
     min-width: 90%;
     max-width: 456px;
     margin: auto;
-    padding: 20px;
+    padding: 10;
     box-shadow: none;
+  }
+  .input-container,
+  .login-button {
+    max-width: 320px;
+    min-width: 250px;
   }
 }
